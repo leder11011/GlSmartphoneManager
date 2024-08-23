@@ -25,4 +25,6 @@ cd out/artifacts/GlSmartphoneVerwaltung_jar
 
 cp ../../../lib . -R
 
+mkdir resources
+
 java -jar GlDutyRosterManagement.jar
