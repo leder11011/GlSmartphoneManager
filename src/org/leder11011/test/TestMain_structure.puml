@@ -1,0 +1,246 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": false,
+    "cutTests": true,
+    "cutClient": false,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": false,
+    "cutConstructors": false
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "org.leder11011.test.TestMain",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_971480264 { 
+   	label=leder11011
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1005453069 { 
+   	label=model
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   Brand1582652093[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(E)Brand</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+   Apple: Brand [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   Nothing: Brand [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   Poco: Brand [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   variants: String[] [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >- Brand()</TD></TR>
+<TR><TD ALIGN="LEFT" >- Brand(variants: String[])</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getVariants(): String[]</TD></TR>
+<TR><TD ALIGN="LEFT" >+ setVariants(variants: String[])</TD></TR>
+<TR><TD ALIGN="LEFT" >+ valueOf(name: String): Brand</TD></TR>
+<TR><TD ALIGN="LEFT" >+ values(): Brand[]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#DCFBD5"
+];
+
+MobileRadioStandard1582652093[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(E)MobileRadioStandard</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+   Five_G: MobileRadioStandard [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   Four_G: MobileRadioStandard [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   displayValue: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >- MobileRadioStandard()</TD></TR>
+<TR><TD ALIGN="LEFT" >- MobileRadioStandard(displayValue: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getDisplayValue(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ setDisplayValue(displayValue: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ valueOf(name: String): MobileRadioStandard</TD></TR>
+<TR><TD ALIGN="LEFT" >+ values(): MobileRadioStandard[]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#DCFBD5"
+];
+
+OperatingSystem1582652093[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(E)OperatingSystem</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+   Android: OperatingSystem [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   iOS: OperatingSystem [1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >- OperatingSystem()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ valueOf(name: String): OperatingSystem</TD></TR>
+<TR><TD ALIGN="LEFT" >+ values(): OperatingSystem[]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#DCFBD5"
+];
+
+Smartphone1582652093[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Smartphone</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   amountFlash: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   amountRAM: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   brandName: Brand [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   mobileRadioStandard: MobileRadioStandard [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   modelName: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   operatingSystem: OperatingSystem [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ Smartphone()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ Smartphone(brandName: Brand, modelName: String, amountRAM: int, amountFlash: int, mobileRadioStandard: MobileRadioStandard, operatingSystem: OperatingSystem)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ Smartphone(csvLine: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getAmountFlash(): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getAmountRAM(): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getBrandName(): Brand</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getMobileRadioStandard(): MobileRadioStandard</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getModelName(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getOperatingSystem(): OperatingSystem</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getPropertiesAsCsvLine(): String</TD></TR>
+<TR><TD ALIGN="LEFT" >+ setAmountFlash(amountFlash: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ setAmountRAM(amountRAM: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ setBrandName(brandName: Brand)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ setMobileRadioStandard(mobileRadioStandard: MobileRadioStandard)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ setModelName(modelName: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ setOperatingSystem(operatingSystem: OperatingSystem)</TD></TR>
+<TR><TD ALIGN="LEFT" >- setPropertiesFromCsvLine(csvLine: String)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1006373592 { 
+   	label=logic
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   FileHandler1581731570[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)FileHandler</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >- FileHandler()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getInstance(): FileHandler</TD></TR>
+<TR><TD ALIGN="LEFT" >+ readFromCsvFile(): List&lt;Smartphone&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ writeToCsvFile(smartphoneList: List&lt;Smartphone&gt;)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1694802552 { 
+   	label=test
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   TestMain1298178686[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)TestMain</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >- TestMain()</TD></TR>
+<TR><TD ALIGN="LEFT" >+ main(args: String[])</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+} 
+
+'edges    
+Smartphone1582652093 -> Brand1582652093[label="brandName
+[0..1]"];
+Smartphone1582652093 -> MobileRadioStandard1582652093[label="mobileRadioStandard
+[0..1]"];
+Smartphone1582652093 -> OperatingSystem1582652093[label="operatingSystem
+[0..1]"];
+    
+}
+@enduml

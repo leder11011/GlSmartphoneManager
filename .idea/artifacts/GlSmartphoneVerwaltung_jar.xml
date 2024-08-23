@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GlSmartphoneVerwaltung:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GlSmartphoneVerwaltung_jar</output-path>
+    <root id="archive" name="GlSmartphoneVerwaltung.jar">
+      <element id="module-output" name="GlSmartphoneVerwaltung" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../Java/lib/ConsoleReaderLib.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
