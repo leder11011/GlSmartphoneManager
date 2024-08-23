@@ -5,7 +5,8 @@ public enum Brand {
     //region Enumeration
     Apple(new String[] {"iPhone SE", "iPhone 14", "iPhone 15"}),
     Nothing(new String[] {"Nothing Phone (1)", "Nothing Phone (2)", "Nothing Phone (2a)"}),
-    Poco(new String[] {"M6", "M6 Pro", "X6"});
+    Poco(new String[] {"M6", "M6 Pro", "X6"}),
+    Google(new String[] {"Pixel 9 Pro"});
 
 
     //endregion
