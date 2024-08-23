@@ -21,8 +21,12 @@ create artifact JAR:
 
 Build - Build Artifacts - Build: out/artifacts/GlSmartphoneVerwaltung_jar/GlSmartphoneVerwaltung.jar
 
-cd out/artifacts/GlSmartphoneVerwaltung_jar
+open Terminal app:
 
-cp ../../../lib . -R
+$ cd out/artifacts/GlSmartphoneVerwaltung_jar
 
-java -jar GlDutyRosterManagement.jar
+$ cp ../../../lib . -R
+
+$ mkdir resources
+
+$ java -jar GlDutyRosterManagement.jar
