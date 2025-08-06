@@ -2,10 +2,8 @@
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Prerequisites:
-- Java 21+
-- mvn
-- docker
-- IntelliJ IDEA (optional)
+- Java 17+
+- IntelliJ IDEA
 
 
 Please open project with IntelliJ IDEA
@@ -36,14 +34,6 @@ $ cp ../../../lib . -R
 
 $ mkdir resources
 
-$ java -jar GlDutyRosterManagement.jar
+$ java -jar GlSmartphoneManagement.jar
 
-~~~~~~~~ mvn build ~~~~~~~~~
 
-`mvn clean javafx:jlink com.coderplus.maven.plugins:copy-rename-maven-plugin:1.0:copy`
-
-`sudo systemctl start docker`
-
-`docker compose up -d`
-
-`mvn clean javafx:run`
