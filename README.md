@@ -1,6 +1,13 @@
 ~ GlSmartphoneManager ~
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+Prerequisites:
+- Java 17+
+- mvn
+- docker
+- IntelliJ IDEA (optional)
+
+
 Please open project with IntelliJ IDEA
 
 add lib/ConsoleReaderLib.jar to File - Project Settings - Libraries
@@ -30,3 +37,13 @@ $ cp ../../../lib . -R
 $ mkdir resources
 
 $ java -jar GlDutyRosterManagement.jar
+
+~~~~~~~~ mvn build ~~~~~~~~~
+
+`mvn clean javafx:jlink com.coderplus.maven.plugins:copy-rename-maven-plugin:1.0:copy`
+
+`sudo systemctl start docker`
+
+`docker compose up -d`
+
+`mvn clean javafx:run`
