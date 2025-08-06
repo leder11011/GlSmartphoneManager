@@ -2,7 +2,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Prerequisites:
-- Java 17+
+- Java 21+
 - mvn
 - docker
 - IntelliJ IDEA (optional)
